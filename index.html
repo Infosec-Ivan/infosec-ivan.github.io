@@ -1,0 +1,205 @@
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ivan</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!-- CSS Styles -->
+<style>
+/* Reset all default margins and paddings */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Background with flying owl */
+body {
+margin: 0;
+padding: 0;
+font-family: 'Roboto Mono', monospace;
+background: #000000; /* Black background */
+overflow: hidden; /* Prevent scrolling */
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+
+
+
+/* Container for centering content */
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+height: 100%;
+width: 100%;
+position: relative;
+z-index: 1;
+}
+
+/* Profile picture styling */
+.profile-pic img {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+border: 3px solid #00ff00;
+animation: pulse 2s infinite;
+}
+
+/* Animation for pulsing profile picture */
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.05); }
+100% { transform: scale(1); }
+}
+
+/* Name styling */
+.name {
+font-size: 4rem;
+margin: 20px 0;
+letter-spacing: 0.5rem;
+animation: hacker-text 3s infinite alternate;
+}
+
+/* Glitchy animation for the name */
+@keyframes hacker-text {
+0%, 100% {
+text-shadow: 0 0 5px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 80px #00ff00;
+}
+50% {
+text-shadow: none;
+}
+}
+
+/* Social links grid layout */
+.social-links {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 20px;
+max-width: 800px;
+width: 100%;
+}
+
+/* Social links styling */
+.social-links a {
+color: #00ff00;
+text-decoration: none;
+font-size: 1.5rem;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: color 0.5s ease, transform 0.3s ease, filter 0.3s ease;
+animation: fadeIn 1s ease-out;
+}
+
+.social-links a i {
+margin-right: 10px;
+}
+
+/* TryHackMe logo styling */
+.social-links a img {
+width: 3rem;
+height: 3rem;
+filter: brightness(0) saturate(100%) invert(39%) sepia(53%) saturate(1406%) hue-rotate(88deg) brightness(92%) contrast(97%);
+}
+
+/* Hover effect for social links */
+.social-links a:hover {
+color: #ff0000; /* Red on hover */
+transform: scale(1.1);
+filter: brightness(1.2);
+}
+
+/* Mobile layout */
+@media screen and (max-width: 600px) {
+.social-links {
+grid-template-columns: 1fr;
+grid-gap: 10px;
+}
+}
+
+/* Fade-in animation for social links */
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* X icon style */
+.fab.fa-x {
+font-size: 1.5rem;
+animation: icon-flicker 1.5s infinite;
+}
+
+@keyframes icon-flicker {
+0% { opacity: 1; }
+50% { opacity: 0.5; }
+100% { opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+
+
+<div class="container">
+<!-- Profile Picture -->
+<div class="profile-pic">
+<img src="Ivan.jpg" alt="Ivan's Profile Picture">
+</div>
+
+<!-- Name -->
+<h1 class="name">Ivan</h1>
+
+<!-- Social Links -->
+<div class="social-links">
+  <a href="https://discord.gg/OwlSec" target="_blank">
+    <i class="fab fa-discord"></i> Discord
+  </a>
+  <a href="https://tryhackme.com/p/IvanX" target="_blank">
+    <img src="tryhackme_logo_full.svg" alt="TryHackMe">
+    TryHackMe
+  </a>
+  <a href="https://github.com/Infosec-Ivan" target="_blank">
+    <i class="fab fa-github"></i> GitHub
+  </a>
+  <a href="https://youtube.com/@infosec-ivan?si=QY4dOXTZeDQspmIQ" target="_blank">
+    <i class="fab fa-youtube"></i> YouTube
+  </a>
+  <a href="https://www.instagram.com/infosec_ivan?igsh=MW5sOGpicTFsbDNrNg==" target="_blank">
+    <i class="fab fa-instagram"></i> Instagram
+  </a>
+  <a href="https://x.com/Infosec_Ivan" target="_blank">
+    <i class="fab fa-x"></i> Twitter
+  </a>
+</div>
+</div>
+
+<!-- JavaScript for animation (optional) -->
+<script>
+// Optional: Add more interactive effects with JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+// Add a random glitch effect (optional)
+setInterval(function() {
+document.querySelector('.name').classList.toggle('glitch');
+}, 2000);
+});
+</script>
+</body>
+</html>
